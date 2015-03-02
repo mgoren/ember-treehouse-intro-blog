@@ -1,0 +1,14 @@
+<h1>about</h1>
+
+This is a very exciting about page.
+
+<hr>
+
+<button class="btn btn-info" {{action 'showElephantInfo'}}>About Elephants</button>
+
+{{#if isPictureShowing}}
+<button class="btn btn-info" {{action 'togglePicture'}}>Hide Elephant</button>
+<p><img src="img/elephant.jpg" alt="elephant photo"></p>
+{{else}}
+<button class="btn btn-info" {{action 'togglePicture'}}>Show Elephant</button>
+{{/if}}
