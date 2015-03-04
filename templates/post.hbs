@@ -14,5 +14,12 @@
   </form>
 {{else}}
   <p>{{body}}</p>
-  <button class="btn btn-danger" {{action 'edit'}}>Edit</button>
+  <button class="btn btn-warning" {{action 'edit'}}>Edit</button>
+  <button class="btn btn-danger" {{action 'delete'}}>Delete</button>
 {{/if}}
+
+{{#each comment in comments}}
+  <p>{{comment.text}}</p>
+{{/each}}
+{{#link-to 'new-comment' this.id class="btn btn-info"}}New comment{{/link-to}}
+{{outlet}}
